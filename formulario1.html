@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuarios</title>
+
+    <style>
+        label{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="index.html">
+
+        <label for="nombre">Nombre(s):</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombres del usuario">
+
+        <br>
+        <br>
+
+        <label for="appPaterno">Apellido Paterno:</label>
+        <input type="text" name="appPaterno" id="appPaterno" placeholder="Apellido paterno del usuario">
+
+        <br>
+        <br>
+
+        <label for="appMaterno">Apellido Materno:</label>
+        <input type="text" name="appMaterno" id="appMaterno" placeholder="Apellido Materno del usuario">
+
+        <br>
+        <br>
+        <label for="email">Correo Electrónico</label>
+        <input type="email" placeholder="usuario@compañia.com">
+
+        <br>
+        <br>
+        <input  type="search" disabled>
+        <input  type="search" readonly value="pedido">
+
+        <input type="number" min="5" max="20" name="pedido" id="pedido" placeholder="Escribe valores entre 5 y 20">
+        <br>
+        <br>
+        <input  type="password" name="password" id="password" pattern="[A-Z]{2}[0-9]{3}">
+
+        
+        <input type="submit">
+        <br>
+        <br>
+        <label for="reset">LIMPIAR DATOS</label>
+        <input type="reset">
+
+        <input type="image" src="Imagenes/Pic.jpg" width="100px" height="100px">
+
+
+        <br>
+        <br>
+        <button type="submit">Enviar datos</button>
+
+    </form>
+    
+</body>
+</html>
