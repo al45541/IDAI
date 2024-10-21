@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Telefónico</title>
+</head>
+<body>
+    <h2>Recibo teléfonico</h2>
+    <p>Minutos de Celular (1.00 c/u):</p>
+    <form onsubmit="alert('GRACIAS POR TU PAGO'); return false;">
+        <label for="minutos">Minutos:</label>
+        <input type="number" id="minutos" name="minutos" required><br><br>
+
+        <h3>Tipo de plan</h3>
+        <input type="radio" id="solo-telefono" name="plan" value="solo-telefono" required>
+        <label for="solo-telefono">Solo telefono</label><br>
+
+        <input type="radio" id="telefono-internet" name="plan" value="telefono-internet">
+        <label for="telefono-internet">Teléfono + Internet</label><br>
+
+        <input type="radio" id="telefono-internet-tv" name="plan" value="telefono-internet-tv">
+        <label for="telefono-internet-tv">Teléfono + Internet + TV</label><br><br>
+
+        <h3>Otros servicios</h3>
+        <input type="checkbox" id="antivirus" name="otros-servicios" value="antivirus">
+        <label for="antivirus">Antivirus</label><br>
+
+        <input type="checkbox" id="nube" name="otros-servicios" value="nube">
+        <label for="nube">Servicio de Nube</label><br>
+
+        <input type="checkbox" id="web-services" name="otros-servicios" value="web-services">
+        <label for="web-services">Web Services</label><br><br>
+
+        <h3>Paquetes</h3>
+        <select id="paquetes" name="paquetes" multiple>
+            <option value="residencial">Residencial</option>
+            <option value="pymes">PYMES</option>
+            <option value="empresas">Empresas</option>
+        </select><br><br>
+
+        <button type="submit">CALCULAR</button>
+    </form>
+</body>
+</html>
