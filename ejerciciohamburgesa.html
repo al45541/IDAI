@@ -1,38 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio de hamburgesas</title>
+    <title>ejercicio hamburguesas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .header-table {
+            width: 100%;
+            display: table;
+        }
+        .header-table div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo img {
+            width: 90%;
+        }
+        .business-info {
+            text-align: center;
+        }
+        .business-info h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .business-info .line {
+            width: 80%;
+            height: 4px;
+            background-color: #d2691e;
+            margin: 10px auto;
+        }
+        .business-info p {
+            margin: 5px;
+            font-size: 18px;
+        }
+        .business-info marquee {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #d2691e;
+        }
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: #d2691e;
+        }
+        .orders {
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 20px;
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 33%;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .ingredientes {
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 15px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .button {
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #b35419;
+        }
+    </style>
 </head>
 <body>
+
+<header>
+    <div class="header-table">
+        <div class="logo">
+            <img src="Imagenes/breakingbad.jpeg" alt="Logotipo del negocio">
+        </div>
+
+        <div class="business-info">
+            <h1>Burgers</h1>
+            <div class="line"></div>
+            <p>Av. Revolución 123, Nuevo Leon</p>
+            <p>Tel: (55) 1234-5678</p>
+            <p>www.burgers.com.mx</p>
+            <marquee behavior="scroll" direction="left">¡Las mejores hamburguesas del estado! ¡Pide ya!</marquee>
+        </div>
+    </div>
+</header>
+
+<hr>
+
+<div class="order-table">
     <table>
-        <thead>
-            <tr>
-                <th>Seleccionar producto</th>
-                <th>Detalles de mi hamburgesa</th>
-                <th>Cantidad y orden</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <input type="radio" name="tipohamburguesa" id="radiohambsencilla" value="hambsencilla">
-                    <label for="radiohambsencilla">hamburguesa sencilla 35.00$mx</label>
-                    <br>
-                    <input type="radio" name="tipohamburguesa" id="radiohambespecial" value="hambespecial">
-                    <label for="radiohambespecial">hamburguesa especial 45.00$mx</label>
-                    <br>
-                    <input type="radio" name="tipohamburguesa" id="radiohambdoble" value="hambdoble">
-                    <label for="radiohambdoble">hamburguesa doble 60.00$mx</label>
-                    <br>
-                    <input type="radio" name="tipohamburguesa" id="radiohambsuprema" value="hambsuprema">
-                    <label for="radiohambsuprema">hamburguesa suprema 90.00$mx</label>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot
+        <tr>
+            <td>
+                <h2>Selecciona tu hamburguesa</h2>
+                <p>
+                    <input type="radio" name="tipohamburguesa" id="sencilla" value="35">
+                    <label for="sencilla">Sencilla 35.00$mx</label><br>
+                    <input type="radio" name="tipohamburguesa" id="especial" value="45">
+                    <label for="especial">Especial 45.00$mx</label><br>
+                    <input type="radio" name="tipohamburguesa" id="doble" value="60">
+                    <label for="doble">Doble 60.00$mx</label><br>
+                    <input type="radio" name="tipohamburguesa" id="suprema" value="90">
+                    <label for="suprema">Suprema 90.00$mx</label>
+                </p>
+
+                <h2>Selecciona el tipo de carne</h2>
+                <p>
+                    <input type="radio" name="tipocarne" id="tradicional" value="Tradicional Especial">
+                    <label for="tradicional">Tradicional Especial</label><br>
+                    <input type="radio" name="tipocarne" id="angus" value="Angus">
+                    <label for="angus">Angus</label><br>
+                    <input type="radio" name="tipocarne" id="pollo" value="Pollo">
+                    <label for="pollo">Pollo</label><br>
+                    <input type="radio" name="tipocarne" id="roastbeef" value="Roast Beef">
+                    <label for="roastbeef">Roast Beef</label>
+                </p>
+            </td>
+
+            <td>
+                <h2>Ingredientes</h2>
+                <div class="ingredientes">
+                    <h3>Ingredientes sencillos</h3>
+                    <input type="checkbox" id="tomate" name="ingrediente" value="Tomate">
+                    <label for="tomate">Tomate</label><br>
+                    <input type="checkbox" id="cebolla" name="ingrediente" value="Cebolla">
+                    <label for="cebolla">Cebolla</label><br>
+                    <input type="checkbox" id="quesoamarillo" name="ingrediente" value="Queso Amarillo">
+                    <label for="quesoamarillo">Queso Amarillo</label><br>
+                    <input type="checkbox" id="jamon" name="ingrediente" value="Jamon">
+                    <label for="jamon">Jamón</label><br>
+
+                    <h3>Ingredientes especiales</h3>
+                    <input type="checkbox" id="aguacate" name="ingrediente" value="Aguacate">
+                    <label for="aguacate">Aguacate</label><br>
+                    <input type="checkbox" id="cebollamorada" name="ingrediente" value="Cebolla Morada">
+                    <label for="cebollamorada">Cebolla Morada</label><br>
+                    <input type="checkbox" id="quesogouda" name="ingrediente" value="Queso Gouda">
+                    <label for="quesogouda">Queso Gouda</label><br>
+                    <input type="checkbox" id="pina" name="ingrediente" value="Piña">
+                    <label for="piña">Piña</label><br>
+                    <input type="checkbox" id="champi" name="ingrediente" value="Champiñones">
+                    <label for="champi">Champiñones</label><br>
+                    <input type="checkbox" id="peperoni" name="ingrediente" value="Peperoni">
+                    <label for="peperoni">Peperoni</label>
+                </div>
+            </td>
+
+            <td>
+                <h2>Detalles del pedido</h2>
+                <label for="cantidad">Cantidad de hamburguesas:</label>
+                <input type="text" id="cantidad" name="cantidad">
+
+                <label for="nombre">Nombre del comprador:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono">
+
+                <label for="tipoentrega">Tipo de entrega:</label>
+                <select id="tipoentrega" name="tipoentrega">
+                    <option value="domicilio">A domicilio</option>
+                    <option value="local">Consumo en local</option>
+                    <option value="llevar">Para llevar</option>
+                </select>
+
+                <button class="button" type="submit">Calcular Pedido</button>
+            </td>
+        </tr>
     </table>
+</div>
 
 </body>
 </html>
