@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Imagenes/taller.jpg" alt="Logotipo del Taller Mecánico">
+        <h1>Taller Mecánico</h1>
+    </header>
+
+    <main>
+        <form>
+            <div class="tabla-servicios">
+                <div class="columna">
+                    <h2>Servicios</h2>
+                    <label><input type="checkbox" name="servicio" value="cambio-aceite"> Cambio de Aceite y filtro</label><br>
+                    <label><input type="checkbox" name="servicio" value="afinacion"> Afinación General</label><br>
+                    <label><input type="checkbox" name="servicio" value="aire-acondicionado"> Mantenimiento a Aire Acondicionado</label><br>
+                    <label><input type="checkbox" name="servicio" value="frenos"> Servicio de Frenos</label><br>
+                    <label><input type="checkbox" name="servicio" value="filtro-aceite"> Sustitución del Filtro de aceite</label><br>
+                    <label><input type="checkbox" name="servicio" value="alineacion"> Alineación y Balanceo</label><br>
+                    <label><input type="checkbox" name="servicio" value="enfriamiento"> Sistema de Enfriamiento</label><br>
+                    <label><input type="checkbox" name="servicio" value="amortiguadores"> Amortiguadores</label>
+                </div>
+
+                <div class="columna">
+                    <h2>Tipo de Motor</h2>
+                    <label><input type="radio" name="motor" value="4-cilindros"> 4 cilindros</label><br>
+                    <label><input type="radio" name="motor" value="6-cilindros"> 6 cilindros</label><br>
+                    <label><input type="radio" name="motor" value="8-cilindros"> 8 cilindros</label><br>
+
+                    <h2>Tipo de Auto</h2>
+                    <label><input type="radio" name="tipo-auto" value="sedan"> Sedan</label><br>
+                    <label><input type="radio" name="tipo-auto" value="lujo"> Lujo</label><br>
+                    <label><input type="radio" name="tipo-auto" value="deportivo"> Deportivo</label><br>
+                    <label><input type="radio" name="tipo-auto" value="familiar"> Familiar</label><br>
+                    <label><input type="radio" name="tipo-auto" value="camioneta"> Camioneta</label>
+                </div>
+
+                <div class="columna">
+                    <h2>Agenda tu Cita</h2>
+                    <label>Marca: <input type="text" name="marca" placeholder="Marca del coche"></label><br>
+                    <label>Modelo: <input type="text" name="modelo" placeholder="Modelo"></label><br>
+                    <label>Año: <input type="text" name="año" placeholder="Año"></label><br>
+                    <label>Kilometraje: <input type="text" name="kilometraje" placeholder="Kilometraje"></label><br>
+                    <label>¿Requiere factura? <input type="text" name="factura" placeholder="Sí o No"></label><br>
+
+                    <h2>Forma de Pago</h2>
+                    <label>Selecciona la forma de pago:</label>
+                    <select name="pago">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta de Crédito o Débito</option>
+                        <option value="transferencia">Transferencia Electrónica</option>
+                        <option value="credito">Crédito a 3 meses</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" onclick="mostrarMensaje()">Enviar</button>
+        </form>
+
+        <div id="mensaje" class="mensaje-oculto">
+            <p>GRACIAS POR CONFIAR EN NOSOTROS.... SU COCHE ESTÁ EN BUENAS MANOS.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Jose Luis Rodriguez Martinez</p>
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensaje').classList.remove('mensaje-oculto');
+            document.getElementById('mensaje').classList.add('mensaje-visible');
+        }
+    </script>
+</body>
+</html>
