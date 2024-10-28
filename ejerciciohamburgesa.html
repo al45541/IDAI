@@ -208,5 +208,16 @@
     </table>
 </div>
 
+<script>
+    //nueva opcion para el select tipoentrega
+    var nuevaOpcion = document.createElement("option");
+    nuevaOpcion.value = "recogerensucursal";  // Valor de la opcionn
+    nuevaOpcion.text = "Recoger en sucursal"; //texto que se ve en la opcion
+
+    var selectTipoEntrega = document.getElementById("tipoentrega");
+    selectTipoEntrega.appendChild(nuevaOpcion);
+</script>
+
 </body>
+
 </html>
