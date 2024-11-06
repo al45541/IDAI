@@ -1,181 +1,302 @@
 <html>
+
 <head>
-<title> Pagina 21 -- Arma mi Computadora </title>
+    <title> Pagina 21 -- Arma mi Computadora </title>
 
+    <style>
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: large;
+        }
+
+        .titleSection {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: large;
+            text-align: center;
+        }
+    </style>
 </head>
-<body background="computer.jpg" >
-<br>
-<center>
-<hr color="white" size="5" width="85%">
-<table width="85%">
-<tr>
-<td width="60%">
-    <center>
-<img src="banner.jpg" width="90%">
-    <font color="white" face="arial black" size="6"> <b>TODO PARA TU COMPUTADORA </b></font><br>
-    <hr color="blue">
-    <font color="white" face="arial" size="3"> <b> Selecciona los componentes de tu preferencia y arma la computadora a tu gusto. </b></font><br>
-    <marquee bgcolor="darkblue"><font color="white" face="arial" size="3"> Gabinetes, Mother Boards, Procesadores, Memorias, Monitores, Discos Duros, Perifericos y Accesorios.</font></marquee><br>
-</td>
-    <td width="40%">
-        <center>
-        <img src="compu.gif" width="80%"><br></td>
-    </center>
-</tr>
-</table>
-<hr color="white" size="5" width="85%">
 
+<body>
 
+    <hr color="white" size="5" width="85%">
+    <table width="85%">
+        <tr>
+            <td width="60%">
+                <img src="banner.jpg" width="90%">
+                <font color="white" face="arial black" size="6"> <b>TODO PARA TU COMPUTADORA </b></label><br>
+                    <hr color="blue">
+                    <font color="white" face="arial" size="3"> <b> Selecciona los componentes de tu preferencia y
+                            arma la computadora a tu gusto. </b></label><br>
+                        <marquee bgcolor="darkblue">
+                            <font color="white" face="arial" size="3"> Gabinetes, Mother Boards, Procesadores, Memorias,
+                                Monitores, Discos Duros, Perifericos y Accesorios.</label>
+                        </marquee><br>
+            </td>
+            <td width="40%">
 
+                <img src="compu.gif" width="80%"><br>
+            </td>
+        </tr>
+    </table>
 
-<form name="tiendacom">
-<table width="90%" bgcolor="darkblue">
-    <tr>
-    <td width="30%">
-        <hr>
-        <center>
-        <font color="white" face="arial" size="4"><b> GABINETE</b></font>
-        </center>        
-        <hr>
-        <center>
-        
-        </center>
-        <hr>
-        <input type="radio" name="gab" onclick="calPr();"> <font face="arial" color="white" size="4"> Minitorre  618.00       </font> <br>
-        <input type="radio" name="gab" onclick="calPr();"> <font face="arial" color="white" size="4"> Torre      1,700.00     </font> <br>
-        <input type="radio" name="gab" onclick="calPr();"> <font face="arial" color="white" size="4"> Desktop    588.00       </font> <br>
-        <input type="radio" name="gab" onclick="calPr();"> <font face="arial" color="white" size="4"> Gamer      1,700.00     </font> <br>
-        <hr>
-        <center>
-        <font color="white" face="arial" size="4"><b>PROCESADOR </b></font>
-        </center>
-        <hr>
-        <center>
-        
-        </center>
-        <hr>
-        <input type="radio" name="pro" onclick="calPr();"> <font face="arial" color="white" size="4"> Celeron     900.00      </font> <br>
-        <input type="radio" name="pro" onclick="calPr();"> <font face="arial" color="white" size="4"> i3          1,900.00    </font> <br>
-        <input type="radio" name="pro" onclick="calPr();"> <font face="arial" color="white" size="4"> i5          2,600.00    </font> <br>
-        <input type="radio" name="pro" onclick="calPr();"> <font face="arial" color="white" size="4"> i7          6,700.00    </font> <br>
-        <hr>
-        <center>
-        <font color="white" face="arial" size="4"><b>MOTHER BOARD </b></font>  
-      
-        <hr>
-    
-        <hr>
-        <select name="mb" onchange="calPr();">
-            <option value=900> Estandar       900.00     </option>
-            <option value=1700> Profeccional  1,700.00   </option> 
-            <option value=3400> Enterprice    3,400.00   </option>
-            <option value=4500> Gamer         4,500.00   </option>
-        </select>
-  </center>
-        <br>
-        <td width="30%">   
-        <hr> 
-        <center>
-        <font color="white" face="arial" size="4"><b>DISCO DURO </b></font>
-        </center>
-        <hr> 
-        <center>
-        
-        </center>
-        <hr>
-        <input type="radio" name="disc" onclick="calPr();"> <font face="arial" color="white" size="4"> 500 GB      520.00  </font> <br>
-        <input type="radio" name="disc" onclick="calPr();"> <font face="arial" color="white" size="4"> 750 GB      650.00  </font> <br>
-        <input type="radio" name="disc" onclick="calPr();"> <font face="arial" color="white" size="4">  1 TB       880.00  </font> <br>
-        <input type="radio" name="disc" onclick="calPr();"> <font face="arial" color="white" size="4"> 250 GB SSD  330.00  </font> <br>
-        <input type="radio" name="disc" onclick="calPr();"> <font face="arial" color="white" size="4"> 500 GB SSD  770.00  </font> <br>
-        <hr>
-        <center>
-        <font color="white" face="arial" size="4"><b>MEMORIA RAM</b></font>
-        </center>
-        <hr>
-        <center>
-        
-        </center>
-        <hr>
-        <input type="radio" name="mem" onclick="calPr();"> <font face="arial" color="white" size="4"> 4 GB    390.00  </font> <br>
-        <input type="radio" name="mem" onclick="calPr();"> <font face="arial" color="white" size="4"> 8 GB    500.00  </font> <br>
-        <input type="radio" name="mem" onclick="calPr();"> <font face="arial" color="white" size="4"> 16 GB   800.00  </font> <br>
-        <hr>
-        <center>
-            <font color="white" face="arial" size="4"><b>MONITOR</b></font>
-        
-        <hr>
+    <hr color="white" size="5" width="85%">
 
-        <hr>
-        <select name="moni" onchange="calPr();">
-            <option value=1000> Tamaño 15"        1,000.00</option>
-            <option value=1400> Tamaño  21"       1,140.00</option> 
-            <option value=1650> Tamaño  21"       1,650.00</option>
-            <option value=2700> Tamaño  25"       2,700.00</option>
-        </select>
-</center>
-        <br><br><br>
+    <form id="idTienda" name="tiendacom">
+        <table width="90%" bgcolor="darkblue">
+            <tr>
+                <td width="30%">
+                    <hr>
+                    <center>
+                        <label><b> GABINETE</b></label>
+                    </center>
+                    <hr>
+                    <center>
+
+                    </center>
+                    <hr>
+                    <input type="radio" name="gab" id="Minitorre" value="Minitorre" onclick="calPr();">
+                    <label> Minitorre 618.00 </label>
+                    <br>
+
+                    <input type="radio" name="gab" id="Torre1" value="Torre1" onclick="calPr();">
+                    <label> Torre 1,700.00 </label>
+                    <br>
+
+                    <input type="radio" name="gab" id="Desktop" value="Desktop" onclick="calPr();">
+                    <label> Desktop 588.00 </label>
+                    <br>
+
+                    <input type="radio" name="gab" id="Gamer1" value="Gamer1" onclick="calPr();">
+                    <label> Gamer 2,700.00 </label>
+
+                    <br>
+                    <hr>
+
+                    <label><b>PROCESADOR </b></label>
+
+                    <hr>
+
+                    <hr>
+                    <input type="radio" name="pro" id="Celeron" value="Celeron" onclick="calPr();">
+                    <label> Celeron 900.00 </label> <br>
+                    <input type="radio" name="pro" id="i3" value="i3" onclick="calPr();">
+                    <label> i3 1,900.00 </label> <br>
+                    <input type="radio" name="pro" id="i5" value="i5" onclick="calPr();">
+                    <label> i5 2,600.00 </label> <br>
+                    <input type="radio" name="pro" id="i7" value="i7" onclick="calPr();">
+                    <label> i7 6,700.00 </label> <br>
+                    <hr>
+                    <center>
+                        <label><b>MOTHER BOARD </b></label>
+
+                        <hr>
+
+                        <hr>
+                        <select name="mb" onchange="calPr();">
+                            <option value=900> Estandar 900.00 </option>
+                            <option value=1700> Profeccional 1,700.00 </option>
+                            <option value=3400> Enterprice 3,400.00 </option>
+                            <option value=4500> Gamer 4,500.00 </option>
+                        </select>
+                    </center>
+                    <br>
+                <td width="30%">
+                    <hr>
+                    <center>
+                        <label><b>DISCO DURO </b></label>
+                    </center>
+                    <hr>
+                    <center>
+
+                    </center>
+                    <hr>
+                    <input type="radio" name="disc" id="500GB" value="500GB" onclick="calPr();">
+                    <label> 500 GB 520.00 </label> <br>
+                    <input type="radio" name="disc" id="750GB" value="750GB" onclick="calPr();">
+                    <label> 750 GB 650.00 </label> <br>
+                    <input type="radio" name="disc" id="1TB" value="1TB" onclick="calPr();">
+                    <label> 1 TB 880.00 </label> <br>
+                    <input type="radio" name="disc" id="250GBSSD" value="250GBSSD" onclick="calPr();">
+                    <label> 250 GB SSD 330.00 </label> <br>
+                    <input type="radio" name="disc" id="500GBSSD" value="500GBSSD" onclick="calPr();">
+                    <label> 500 GB SSD 770.00 </label> <br>
+                    <hr>
+                    <center>
+                        <label><b>MEMORIA RAM</b></label>
+                    </center>
+                    <hr>
+                    <center>
+
+                    </center>
+                    <hr>
+                    <input type="radio" name="mem" id="4GB" value="4GB" onclick="calPr();">
+                    <label> 4 GB 390.00 </label> <br>
+                    <input type="radio" name="mem" id="8GB" value="8GB" onclick="calPr();">
+                    <label> 8 GB 500.00 </label> <br>
+                    <input type="radio" name="mem" id="16GB" value="16GB" onclick="calPr();">
+                    <label> 16 GB 800.00 </label> <br>
+                    <hr>
+                    <center>
+                        <label><b>MONITOR</b></label>
+
+                        <hr>
+
+                        <hr>
+                        <select name="moni" onchange="calPr();">
+                            <option value=1000> Tamaño 15" 1,000.00</option>
+                            <option value=1400> Tamaño 21" 1,140.00</option>
+                            <option value=1650> Tamaño 21" 1,650.00</option>
+                            <option value=2700> Tamaño 25" 2,700.00</option>
+                        </select>
+                    </center>
+                    <br><br><br>
+                    <br>
+                <td width="30%">
+                    <h r>
+                        <center>
+                            <label><b>PERIFERICOS Y ACCESORIOS </b></label>
+                        </center>
+                        <hr>
+                        <center>
+
+                        </center>
+                        <hr>
+                        <input type="checkbox" name="acc1" onclick="calPr();">
+                        <label> Teclado y Mouse inalambricos 291.00 </label> <br>
+                        <input type="checkbox" name="acc2" onclick="calPr();">
+                        <label> Bocinas SoundRound 2,240.00 </label> <br>
+                        <input type="checkbox" name="acc3" onclick="calPr();">
+                        <label> Camara web 1,070.00 </label> <br>
+                        <input type="checkbox" name="acc4" onclick="calPr();">
+                        <label> Diadema 900.00 </label> <br>
+                        <input type="checkbox" name="acc5" onclick="calPr();">
+                        <label> Scanner 1,820.00 </label> <br>
+                        <input type="checkbox" name="acc6" onclick="calPr();">
+                        <label> Impresora Laser B/N 2,500.00 </label> <br>
+                        <input type="checkbox" name="acc7" onclick="calPr();">
+                        <label> Impresora de Inyeccion color 2,700.00 </label> <br>
+                        <input type="checkbox" name="acc8" onclick="calPr();">
+                        <label> Joystick 960.00 </label> <br>
+                        <input type="checkbox" name="acc9" onclick="calPr();">
+                        <label> Memoria USB 8 GB 70.00 </label> <br>
+                        <input type="checkbox" name="acc10" onclick="calPr();">
+                        <label> Regulador 800.00 </label> <br>
+                        <input type="checkbox" name="acc11" onclick="calPr();">
+                        <label>Sistema Operativo Windows Home 2,400.00 </label> <br>
+                        <input type="checkbox" name="acc12" onclick="calPr();">
+                        <label> Office 365 Personal 1,300.00 </label> <br>
+                        <input type="checkbox" name="acc13" onclick="calPr();">
+                        <label>Vacuna Antivirus (Mc Affe) 400.00 </label> <br>
+                        <hr>
+                        <center>
+                            <br>
+                            <font face="arial" color="white" size="3"> Tipo de cambio (Dlls &lt; --&gt; Pesos): <input
+                                    <input type="text" name="marca" size="9" value=18 onchange="calPr();"><br>
+                                <hr>
+                                Total:
+                                <input type="text" name="tot1" size="5"> Pesos
+                                <input type="text" name="tot2" size="5"> Dolares
+                                <br>
+                        </center>
+                </td>
+            </tr>
+        </table>
+    </form>
+
     <br>
-    <td width="30%">
-    <h    r>
+    <hr size="5" color="darkblue">
     <center>
-    <font color="white" face="arial" size="4"><b>PERIFERICOS Y ACCESORIOS </b></font>
-    </center>
-    <hr>
-    <center>
-    
-    </center>
-    <hr> 
-    <input type="checkbox" name="acc1"  onclick="calPr();"> <font face="arial" color="white" size="4"> Teclado y Mouse inalambricos            291.00     </font> <br>
-    <input type="checkbox" name="acc2"  onclick="calPr();"> <font face="arial" color="white" size="4"> Bocinas SoundRound                      2,240.00   </font> <br>
-    <input type="checkbox" name="acc3"  onclick="calPr();"> <font face="arial" color="white" size="4"> Camara web                              1,070.00   </font> <br>
-    <input type="checkbox" name="acc4"  onclick="calPr();"> <font face="arial" color="white" size="4"> Diadema                                 900.00     </font> <br>
-    <input type="checkbox" name="acc5"  onclick="calPr();"> <font face="arial" color="white" size="4"> Scanner                                 1,820.00   </font> <br>
-    <input type="checkbox" name="acc6"  onclick="calPr();"> <font face="arial" color="white" size="4"> Impresora Laser B/N                     2,500.00   </font> <br>
-    <input type="checkbox" name="acc7"  onclick="calPr();"> <font face="arial" color="white" size="4"> Impresora de Inyeccion color            2,700.00   </font> <br>
-    <input type="checkbox" name="acc8"  onclick="calPr();"> <font face="arial" color="white" size="4"> Joystick                                960.00     </font> <br>
-    <input type="checkbox" name="acc9"  onclick="calPr();"> <font face="arial" color="white" size="4"> Memoria USB 8 GB                        70.00      </font> <br>
-    <input type="checkbox" name="acc10" onclick="calPr();"> <font face="arial" color="white" size="4"> Regulador                               800.00     </font> <br>
-    <input type="checkbox" name="acc11" onclick="calPr();"> <font face="arial" color="white" size="4">Sistema Operativo Windows Home           2,400.00   </font> <br>
-    <input type="checkbox" name="acc12" onclick="calPr();"> <font face="arial" color="white" size="4"> Office 365 Personal                     1,300.00   </font> <br>
-    <input type="checkbox" name="acc13" onclick="calPr();"> <font face="arial" color="white" size="4">Vacuna Antivirus (Mc Affe)               400.00     </font> <br>
-    <hr>
-    <center>
-    <br>
-    <font face="arial" color="white" size="3"> Tipo de cambio (Dlls &lt; --&gt; Pesos): <input <input type="text" name="marca" size="9" value=18 onchange="calPr();"><br>
-<hr>
- Total: <input type="text" name="tot1" size="5"> Pesos <input type="text" name="tot2" size="5"> Dolares 
-<br>
-</center>
-</td>
-</tr>
-</table>
-        </form>
+        <table>
+            <tr>
+                <td>
+                    <center>
+                        <font size="5" color="white" face="arial" color="white">
+                            Pagina Desarrollada por: xxxxxxxxx <br>
+                            Derechos Reservados <br>
+                            Contacto: xxxxx <br>
 
-<br>
-<hr size="5" color="darkblue">
-<center>
-<table>
-<tr>
-<td>
-<center>
-<font size="5" color="white" face="arial" color="white" >
-Pagina Desarrollada por: xxxxxxxxx <br>
-Derechos Reservados <br>
-Contacto: xxxxx <br>
+                </td>
+            </tr>
+        </table>
+    </center>
 
-</td>
-</tr>
-</table>
-</center>
+
+    <script>
+
+        //Con la instruccion de "getElementsByName" estoy obtenniendo un arreglo de todos los elementos que tenga este Name: tiendacom
+        var f = document.getElementsByName("tiendacom");
+        var formulario = document.getElementById("idTienda");
+
+        function calPr() {
+            
+
+
+            formulario.tot1.value = "";
+
+            //GABINETE
+            if (formulario.gab.value == "Minitorre") {
+                formulario.tot1.value = "618";
+            }
+            else if (formulario.gab.value == "Torre1") {
+                formulario.tot1.value = "1700";
+            }
+            else if (formulario.gab.value == "Desktop") {
+                formulario.tot1.value = "580";
+            }
+            else if (formulario.gab.value == "Gamer1") {
+                formulario.tot1.value = "2700";
+            }
+
+            //PROCESADOR
+            if (formulario.pro.value == "Celeron") {
+                formulario.tot1.value = "900";
+            }
+            else if (formulario.pro.value == "i3") {
+                formulario.tot1.value = "1900";
+            }
+            else if (formulario.pro.value == "i5") {
+                formulario.tot1.value = "2600";
+            }
+            else if (formulario.pro.value == "i7") {
+                formulario.tot1.value = "6700";
+            }
+
+            //DISCO DURO
+            if (formulario.disc.value == "500GB") {
+                formulario.tot1.value = "520";
+            }
+            else if (formulario.disc.value == "750GB") {
+                formulario.tot1.value = "650";
+            }
+            else if (formulario.disc.value == "1TB") {
+                formulario.tot1.value = "880";
+            }
+            else if (formulario.disc.value == "250GBSSD") {
+                formulario.tot1.value = "330";
+            }
+            else if (formulario.disc.value == "500GBSSD") {
+                formulario.tot1.value = "770";
+            }
+
+            //MEMORIA RAM
+            if(formulario.mem.value == "4GB")
+            {
+                formulario.tot1.value = "390";
+            }
+            else if (formulario.mem.value == "8GB")
+            {
+                formulario.tot1.value = "500";
+            }
+            else if (formulario.mem.value == "16GB")
+            {
+                formulario.tot1.value = "800";
+            }
+        }
+    </script>
+
 </body>
-
-
-<script>
-    ()
-    {
-        var=
-    }
-</script>
 
 </html>
