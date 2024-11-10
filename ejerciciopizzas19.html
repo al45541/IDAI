@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina 19 pizzas</title>
+    <script>
+        function PPP() {
+            // Obtener cantidad de pizzas
+            const A = parseInt(pizzeria.canpiz.value) || 0;
+
+            // Calcular costo según tamaño de pizza
+            let TB = 0;
+            if (pizzeria.cantpi[0].checked) { TB = 45; }
+            if (pizzeria.cantpi[1].checked) { TB = 90; }
+            if (pizzeria.cantpi[2].checked) { TB = 150; }
+            if (pizzeria.cantpi[3].checked) { TB = 250; }
+            if (pizzeria.cantpi[4].checked) { TB = 400; }
+
+            // Calcular costo según tipo de pan
+            let TC = 0;
+            if (pizzeria.tippan[1].checked) { TC = 15; }
+            if (pizzeria.tippan[2].checked) { TC = 20; }
+            if (pizzeria.tippan[3].checked) { TC = 30; }
+
+            // Calcular costo según ingredientes
+            let TD = 0;
+            if (pizzeria.ingre1.checked) { TD += 5; }
+            if (pizzeria.ingre2.checked) { TD += 5; }
+            if (pizzeria.ingre3.checked) { TD += 5; }
+            if (pizzeria.ingre4.checked) { TD += 5; }
+            if (pizzeria.ingre5.checked) { TD += 5; }
+            if (pizzeria.ingre6.checked) { TD += 5; }
+            if (pizzeria.ingre7.checked) { TD += 5; }
+            if (pizzeria.ingre8.checked) { TD += 5; }
+
+            // Calcular costo según selección especial
+            const E = parseInt(pizzeria.pizzaselect.value) || 0;
+
+            // Verificar si es buffet
+            const F = pizzeria.bufff.value;
+            const G = parseInt(pizzeria.adul.value) || 0;
+            const H = parseInt(pizzeria.nin.value) || 0;
+
+            let TTT = 0;
+            if (F === "SI") {
+                TTT = (G * 120) + (H * 60);
+            } else {
+                TTT = (TB + TC + TD + E) * A;
+            }
+
+            // Asignar valor al campo total
+            pizzeria.totpiz.value = TTT;
+        }
+    </script>
+</head>
+<body bgcolor="#F98903">
+    <center>
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <form name="pizzeria">
+            <table width="90%" border="3">
+                <tr>
+                    <td width="25%">
+                        <font face="broadway">
+                            CANTIDAD: <input type="text" name="canpiz" size="3" onchange="PPP();" value="1">
+                        </font>
+                        <hr>
+                        <br>
+                        <font face="broadway">TAMAÑO</font>
+                        <br><br>
+                        <input type="radio" name="cantpi" onclick="PPP();" checked> Personal 45.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Chica 90.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Mediana 150.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Familiar 250.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Suprema 400.00<br>
+                        <hr>
+                        <br>
+                        <font face="broadway">TIPO DE PAN:</font>
+                        <br><br>
+                        <input type="radio" name="tippan" onclick="PPP();" checked> Normal +0.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Delgada +15.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Pan Pizza +20.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Hut cheese +30.00<br>
+                        <hr>
+                    </td>
+                    <td width="40%">
+                        <font face="broadway">INGREDIENTES: (5.00 c/u)</font>
+                        <br><br>
+                        <input type="checkbox" name="ingre1" onclick="PPP();"> Jamon<br>
+                        <input type="checkbox" name="ingre2" onclick="PPP();"> Peperoni<br>
+                        <input type="checkbox" name="ingre3" onclick="PPP();"> Tocino<br>
+                        <input type="checkbox" name="ingre4" onclick="PPP();"> Champiñones<br>
+                        <input type="checkbox" name="ingre5" onclick="PPP();"> Chorizo Español<br>
+                        <input type="checkbox" name="ingre6" onclick="PPP();"> Piña<br>
+                        <input type="checkbox" name="ingre7" onclick="PPP();"> Salami<br>
+                        <input type="checkbox" name="ingre8" onclick="PPP();"> Aceituna<br>
+                        <hr>
+                        <font face="broadway">ESPECIALES:</font>
+                        <br><br>
+                        <select name="pizzaselect" onchange="PPP();">
+                            <option value="0">Margarita +0.00</option>
+                            <option value="15">4 Quesos +15.00</option>
+                            <option value="10">Hawaiana +10.00</option>
+                            <option value="15">Napolitana +15.00</option>
+                            <option value="25">NewYork +25.00</option>
+                            <option value="30">Mexicana +30.00</option>
+                        </select>
+                        <hr>
+                        <font face="broadway">¿Quieres Buffet?:</font>
+                        <select name="bufff" onchange="PPP();">
+                            <option value="SI">Si</option>
+                            <option value="NO">No</option>
+                        </select>
+                        <br>
+                        Numero de adultos (120.00 c/u): <input type="text" name="adul" size="2" onchange="PPP();" value="0">
+                        <br>
+                        Numero de niños (60.00 c/u): <input type="text" name="nin" size="2" onchange="PPP();" value="0">
+                    </td>
+                    <td width="25%">
+                        <b>TOTAL A PAGAR:</b> <input type="text" name="totpiz" readonly>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <img src="pizzapng1.png" width="10%">
+		<img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+        <img src="pizzapng1.png" width="10%">
+	</center>
+</body>
+</html>
