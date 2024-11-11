@@ -205,23 +205,83 @@
 
                 <button class="button" type="submit">Calcular Pedido</button>
             </td>
+
+            <td>
+                <h2>Nivel de Cocción</h2>
+                <p>
+                    <input type="radio" id="trescuartos" name="coccion" value="3/4">
+                    <label for="trescuartos">3/4</label><br>
+                    <input type="radio" id="biencocido" name="coccion" value="Bien Cocido">
+                    <label for="biencocido">Bien Cocido</label><br>
+                </p>
+            
+                <h2>Tipo de Queso</h2>
+                <select id="tipoqueso" name="tipoqueso">
+                    <option value="cheddar">Cheddar</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="suizo">Suizo</option>
+                </select>
+            
+                <h2>Agrega salsas</h2>
+                <input type="checkbox" id="mayonesa" name="salsa" value="Mayonesa">
+                <label for="mayonesa">Mayonesa</label><br>
+                <input type="checkbox" id="bbq" name="salsa" value="BBQ">
+                <label for="bbq">BBQ</label><br>
+                <input type="checkbox" id="mostaza" name="salsa" value="Mostaza">
+                <label for="mostaza">Mostaza</label><br>
+            
+                <h2>¿Deseas combo con bebida y papas?</h2>
+                <p>
+                    <input type="radio" id="concombo" name="combo" value="Con Combo">
+                    <label for="concombo">Sí</label><br>
+                    <input type="radio" id="sincombo" name="combo" value="Sin Combo">
+                    <label for="sincombo">No</label><br>
+                </p>
+            
+                <h2>Mensaje Especial</h2>
+                <label for="mensaje">Escribe un mensaje especial para tu pedido:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="30" placeholder="Escribe aquí tus preferencias o notas adicionales"></textarea>
+            </td>
+            
         </tr>
     </table>
 </div>
 
 <script>
-    //nueva opcion para el select tipoentrega
-    var nuevaOpcion = document.createElement("option");
-    nuevaOpcion.value = "recogerensucursal";  // Valor de la opcionn
-    nuevaOpcion.text = "Recoger en sucursal"; //texto que se ve en la opcion
+var nuevaOpcionSalsa = document.createElement("input");
+nuevaOpcionSalsa.type = "checkbox";
+nuevaOpcionSalsa.id = "jalapeños";
+nuevaOpcionSalsa.value = "Jalapeños";
+nuevaOpcionSalsa.name = "salsa";
 
-    var selectTipoEntrega = document.getElementById("tipoentrega");
-    selectTipoEntrega.appendChild(nuevaOpcion);
+var labelJalapenos = document.createElement("label");
+labelJalapenos.htmlFor = "jalapeños";
+labelJalapenos.innerText = "Jalapeños";
 
-    var function Calcular(e) {
-        var total = 0.0;
-        if (f.tipodehamburguesa.value == "hambsencilla")
-        }
+var containerSalsas = document.querySelector("h2 ~ input[type='checkbox']");
+containerSalsas.parentNode.appendChild(nuevaOpcionSalsa);
+containerSalsas.parentNode.appendChild(labelJalapenos);
+
+function CalcularPedido() {
+    var total = 0;
+    var tipoHamburguesa = document.querySelector('input[name="tipohamburguesa"]:checked').value;
+    var tipoCombo = document.querySelector('input[name="combo"]:checked').value;
+
+    if (tipoHamburguesa === "35") total += 35;
+    if (tipoHamburguesa === "45") total += 45;
+    if (tipoHamburguesa === "60") total += 60;
+    if (tipoHamburguesa === "90") total += 90;
+
+    if (tipoCombo === "Con Combo") total += 20;
+
+    alert("Total a pagar: " + total + " MXN");
+}
+
+document.querySelector(".button").addEventListener("click", function(e) {
+    e.preventDefault();
+    CalcularPedido();
+});
+
 </script>
 
 </body>
