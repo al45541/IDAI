@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Telefónico</title>
+    <style>
+        body {
+            background-color: #f4e242f3;
+        }
+        h1 {
+            font: "broadway";
+        }
+        label {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="calculoMinutos" action="ReciboTelefonico(JS).html" method="GET">
+        <h1>RECIBO TELEFÓNICO</h1>
+        
+        <label for="">Minutos de celular (10.00 MXN c/u)</label>
+        <br>
+        <input type="number" id="minCel" value="1">
+
+        <hr>
+        <label for="">TIPO DE PLAN</label>
+        <br>
+        <input type="radio" name="plan" value="500"> Solo teléfono (500 MXN)<br>
+        <input type="radio" name="plan" value="650"> Teléfono + Internet (650 MXN)<br>
+        <input type="radio" name="plan" value="800"> Teléfono + Internet + TV (800 MXN)<br>
+        <input type="radio" name="plan" value="950"> Teléfono + Internet (100 Mbps) + 2 TV (950 MXN)<br>
+
+        <hr>
+        <label for="">OTROS SERVICIOS</label>
+        <br>
+        <input type="checkbox" name="servicio" value="50"> Antivirus (50 MXN)<br>
+        <input type="checkbox" name="servicio" value="70"> Servicio de Nube (70 MXN)<br>
+        <input type="checkbox" name="servicio" value="90"> Web Services (90 MXN)<br>
+        <input type="checkbox" name="servicio" value="110"> Firewall (110 MXN)<br>
+
+        <hr>
+        <label for="">PAQUETES</label>
+        <br>
+        <select id="paquete">
+            <option value="100">Residencial (100 MXN)</option>
+            <option value="150">PYMES (150 MXN)</option>
+            <option value="200">Empresas (200 MXN)</option>
+            <option value="50">Universidades (50 MXN)</option>
+        </select>
+
+        <hr>
+        <div class="result">
+            <label for="resultado">Monto Total: </label>
+            <input type="text" id="resultado" readonly>
+        </div>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <script>
+        function calcular() {
+            var minCel = parseInt(document.getElementById("minCel").value);
+            var total = minCel * 10;
+
+            var plan = document.querySelector('input[name="plan"]:checked');
+            if (plan) {
+                total += parseInt(plan.value);
+            }
+
+            var servicios = document.querySelectorAll('input[name="servicio"]:checked');
+            servicios.forEach(function(servicio) {
+                total += parseInt(servicio.value);
+            });
+
+            var paquete = document.getElementById("paquete");
+            total += parseInt(paquete.value);
+
+            document.getElementById("resultado").value = total + " MXN";
+        }
+        // Hecho por Jose Luis Rodriguez Martinez
+    </script>
+</body>
+</html>
