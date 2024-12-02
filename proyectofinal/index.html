@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes Universitarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Deportes Universitarios</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel de imágenes -->
+        <section id="inicio" class="carousel">
+            <div class="slides">
+                <div class="slide active" style="background-image: url(images/tochito.jpg);">
+                    <h2>Tochito</h2>
+                    <p>Descubre nuestro equipo de tochito bandera.</p>
+                    <a href="tochito.html" class="btn">Ver más</a>
+                </div>
+                <div class="slide" style="background-image: url(images/futbol.jpg);">
+                    <h2>Fútbol</h2>
+                    <p>Únete a nuestro equipo de fútbol masculino.</p>
+                    <a href="futbol.html" class="btn">Ver más</a>
+                </div>
+                <div class="slide" style="background-image: url('images/volleyball.jpg');">
+                    <h2>Volleyball</h2>
+                    <p>Participa en los torneos de volleyball.</p>
+                    <a href="volleyball.html" class="btn">Ver más</a>
+                </div>
+                <div class="slide" style="background-image: url('ajedrez.jpg');">
+                    <h2>Ajedrez</h2>
+                    <p>Aprende a jugar ajedrez.</p>
+                    <a href="ajedrez.html" class="btn">Ver más</a>
+                </div>
+                <div class="slide" style="background-image: url('pingpong.jpg');">
+                    <h2>Ping Pong</h2>
+                    <p>Mejora tus reflejos con el equipo de ping pong.</p>
+                    <a href="pingpong.html" class="btn">Ver más</a>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev">←</button>
+                <button class="next">→</button>
+            </div>
+        </section>
+
+        <!-- Noticias -->
+        <section id="noticias" class="news">
+            <h2>Últimas Noticias</h2>
+            <article>
+                <h3>El equipo de Fútbol queda eliminado del torneo</h3>
+                <p>El equipo de fútbol masculino fue eliminado del torneo intrauniversitario</p>
+            </article>
+            <article>
+                <h3>Ajedrecistas destacan en nuevo torneo</h3>
+                <p>Nuestro equipo de ajedrez entro a un nuevo torneo y destacan en este</p>
+            </article>
+            <article>
+                <h3>El equipo de tochito gana el ultimo juego</h3>
+                <p>El equipo de tochito de la universidad gana el juego pasado por diferencia</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Universidad del Norte. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
